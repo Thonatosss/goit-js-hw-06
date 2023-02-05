@@ -17,7 +17,7 @@ const list = document.querySelector(".gallery");
 list.classList.add("second-ex")
 
 const elements = images.map((image) => {
-  const listEl = `<li><img url = "${image.url}" alt = "${image.alt}"></li>`;
+  const listEl = `<li><img url = '${image.url}' alt = "${image.alt}"></li>`;
   return listEl;
 });
 
