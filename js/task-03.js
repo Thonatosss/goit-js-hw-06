@@ -14,7 +14,6 @@ const images = [
 ];
 
 const list = document.querySelector(".gallery");
-list.classList.add("second-ex")
 
 const elements = images.map((image) => {
   const listEl = `<li><img width = "300" height= "300" src = '${image.url}' alt = "${image.alt}"></li>`;
