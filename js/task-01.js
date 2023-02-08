@@ -1,7 +1,8 @@
 const refs = {
     numberOfCatrgories: document.querySelectorAll('#categories .item'),
-    parentList: document.querySelector('#categories'),
 };
+
+
 console.log(`Number of categories: ${refs.numberOfCatrgories.length}`);
 
 console.log(`Category: ${refs.parentList.childNodes[1].childNodes[1].textContent}`);

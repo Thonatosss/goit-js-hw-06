@@ -2,15 +2,13 @@ const refs = {
   input: document.getElementById("validation-input"),
 };
 
-const validation = () => {
-  if (refs.input.value.length < refs.input.getAttribute("data-length")) {
-      refs.input.classList.add("invalid");
-  }
-   else if (refs.input.classList.contains("invalid")) {
-    refs.input.classList.remove("invalid");
-  }
-  refs.input.classList.add("valid");
 
-  
+const validation = () => {
+  refs.input.classList.remove("valid", "invalid");
+  if (refs.input.value.length === Number(refs.input.getAttribute("data-length"))) {
+      return refs.input.classList.add("valid");
+  };
+  refs.input.classList.add("invalid");
+
 };
 refs.input.addEventListener("blur", validation);
