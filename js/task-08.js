@@ -9,12 +9,13 @@ const onFormSubmit = (event) => {
     event.preventDefault();
     const formElements = event.currentTarget.elements;
     const formData = new FormData(event.currentTarget);
-    if (formElements.email.value === '' || formElements.password.value === '') {
-        alert("Заповніть всі поля!")
+    if (formElements.email.value.trim() === '' || formElements.password.value === '') {
+        return alert("Заповніть всі поля!")
     };
-    formData.forEach((name, value) => {
-        console.log(`${value} : ${name}`);
-    });
+    const output = {};
+    output.email = formData.get('email');
+    output.password = formData.get('password');
+    console.log(output);
     refs.form.reset();
 
 };
